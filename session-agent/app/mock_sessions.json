@@ -1,97 +1,124 @@
 [
   {
-    "_id": "sess001",
-    "lesson_id": "les001",
+    "id": "sess001",
     "child_id": "child001",
+    "lesson_id": "les001",
+    "lesson_version": "1.0",
+    "status": "completed",
     "started_at": "2025-07-25T10:00:00Z",
     "completed_at": "2025-07-25T10:20:00Z",
-    "status": "completed",
-    "total_score": 85,
     "step_results": [
       {
-        "step_id": 1,
+        "step_id": 0,
+        "step_type": "voice",
         "is_successful": true,
         "duration_seconds": 300,
         "details": {
-          "conversation_quality": "good",
-          "keywords_used": 5
+          "transcript": "AI: Merhaba! Bugün toplama işlemleri yapacağız. 3 + 5 kaç eder?\nChild: Sekiz!\nAI: Harika! Şimdi 7 + 2 kaç eder?\nChild: Dokuz!\nAI: Mükemmel! Son soru: 4 + 6 kaç eder?\nChild: On!\nAI: Çok güzel! Tüm soruları doğru cevapladın."
         }
       },
       {
-        "step_id": 2,
+        "step_id": 1,
+        "step_type": "cv_game",
         "is_successful": false,
         "duration_seconds": 250,
         "details": {
-          "attempts": 4,
-          "hints_used": 2
+          "game_score": 65
         }
-      },
-      {
-        "step_id": 3,
-        "is_successful": true,
-        "duration_seconds": 350,
-        "details": {
-          "correct_answers": 8,
-          "wrong_answers": 2
-        }
-      }
-    ],
-    "llm_analysis_status": "completed",
-    "llm_analysis_report": "Bu oturumda çocuk güçlü bir başlangıç yapmış ancak ikinci adımda zorlanmıştır. Test performansı başarılıdır."
-  },
-  {
-    "_id": "sess002",
-    "lesson_id": "les001",
-    "child_id": "child002",
-    "started_at": "2025-07-26T09:15:00Z",
-    "completed_at": null,
-    "status": "abandoned",
-    "total_score": null,
-    "step_results": [
-      {
-        "step_id": 1,
-        "is_successful": true,
-        "duration_seconds": 280,
-        "details": {}
-      }
-    ],
-    "llm_analysis_status": "pending",
-    "llm_analysis_report": null
-  },
-  {
-    "_id": "sess003",
-    "lesson_id": "les002",
-    "child_id": "child001",
-    "started_at": "2025-07-27T11:30:00Z",
-    "completed_at": "2025-07-27T11:50:00Z",
-    "status": "completed",
-    "total_score": 92,
-    "step_results": [
-      {
-        "step_id": 1,
-        "is_successful": true,
-        "duration_seconds": 320,
-        "details": {}
       },
       {
         "step_id": 2,
+        "step_type": "test",
         "is_successful": true,
-        "duration_seconds": 300,
+        "duration_seconds": 350,
         "details": {
-          "attempts": 2
-        }
-      },
-      {
-        "step_id": 3,
-        "is_successful": true,
-        "duration_seconds": 290,
-        "details": {
-          "correct_answers": 9,
-          "wrong_answers": 1
+          "correct_choices": 8,
+          "wrong_choices": 2,
+          "total_questions": 10
         }
       }
     ],
+    "total_score": 85,
     "llm_analysis_status": "completed",
-    "llm_analysis_report": "Çocuk bu oturumda oldukça başarılı olmuştur. Tüm adımlar etkin bir şekilde tamamlanmıştır."
+    "llm_analysis_report": "Bu oturumda çocuk güçlü bir başlangıç yapmış ancak ikinci adımda zorlanmıştır. Test performansı başarılıdır.",
+    "next_step": null,
+    "is_lesson_completed": true,
+    "message": "Ders başarıyla tamamlandı!"
+  },
+  {
+    "id": "sess002",
+    "child_id": "child002",
+    "lesson_id": "les001",
+    "lesson_version": "1.0",
+    "status": "abandoned",
+    "started_at": "2025-07-26T09:15:00Z",
+    "completed_at": null,
+    "step_results": [
+      {
+        "step_id": 0,
+        "step_type": "voice",
+        "is_successful": true,
+        "duration_seconds": 280,
+        "details": {
+          "transcript": "AI: Merhaba! Bugün matematik dersine başlayalım. 2 + 3 kaç eder?\nChild: Beş!\nAI: Doğru! Şimdi 1 + 4 kaç eder?\nChild: Beş!\nAI: Çok güzel! Son soru: 0 + 5 kaç eder?\nChild: Beş!\nAI: Harika! Tüm soruları doğru cevapladın."
+        }
+      }
+    ],
+    "total_score": null,
+    "llm_analysis_status": "pending",
+    "llm_analysis_report": null,
+    "next_step": {
+      "step_id": 1,
+      "step_type": "cv_game",
+      "instructions": "Sayıları toplamlarıyla eşleştir."
+    },
+    "is_lesson_completed": false,
+    "message": "Ders yarıda bırakıldı."
+  },
+  {
+    "id": "sess003",
+    "child_id": "child001",
+    "lesson_id": "les002",
+    "lesson_version": "1.0",
+    "status": "completed",
+    "started_at": "2025-07-27T11:30:00Z",
+    "completed_at": "2025-07-27T11:50:00Z",
+    "step_results": [
+      {
+        "step_id": 0,
+        "step_type": "voice",
+        "is_successful": true,
+        "duration_seconds": 320,
+        "details": {
+          "transcript": "AI: Hoş geldin! Bugün çarpma işlemleri yapacağız. 2 x 3 kaç eder?\nChild: Altı!\nAI: Mükemmel! Şimdi 3 x 4 kaç eder?\nChild: On iki!\nAI: Harika! Son soru: 5 x 2 kaç eder?\nChild: On!\nAI: Çok güzel! Tüm çarpma sorularını doğru cevapladın."
+        }
+      },
+      {
+        "step_id": 1,
+        "step_type": "cv_game",
+        "is_successful": true,
+        "duration_seconds": 300,
+        "details": {
+          "game_score": 95
+        }
+      },
+      {
+        "step_id": 2,
+        "step_type": "test",
+        "is_successful": true,
+        "duration_seconds": 290,
+        "details": {
+          "correct_choices": 9,
+          "wrong_choices": 1,
+          "total_questions": 10
+        }
+      }
+    ],
+    "total_score": 92,
+    "llm_analysis_status": "completed",
+    "llm_analysis_report": "Çocuk bu oturumda oldukça başarılı olmuştur. Tüm adımlar etkin bir şekilde tamamlanmıştır.",
+    "next_step": null,
+    "is_lesson_completed": true,
+    "message": "Mükemmel! Ders tamamlandı."
   }
 ]
